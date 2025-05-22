@@ -1,5 +1,5 @@
 let data = [
-  { id: 0, emoji: '🌸 ' },
+  { id: 0, emoji: '〰️ ' },
   { id: 1, emoji: '🍀 ' },
   { id: 2, emoji: '🌷 ' },
   { id: 3, emoji: '🎄 ' },
@@ -14,7 +14,7 @@ let data = [
   { id: 12, emoji: '🌴 ' },
   { id: 13, emoji: '🌳 ' },
   { id: 14, emoji: '🌲 ' },
-  { id: 15, emoji: '🎍 ' },
+  { id: 15, emoji: '🌸 ' },
   { id: 16, emoji: '🍄 ' },
   { id: 17, emoji: '🌾 ' },
   { id: 18, emoji: '🪻 ' },

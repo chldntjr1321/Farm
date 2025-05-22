@@ -1,31 +1,36 @@
 import { useState } from 'react';
 import './App.css';
 import data from './data';
-import Grass from './Grass';
 
 function App() {
-  const wave = '〰️ ';
-  const [grassArr, setGrassArr] = useState(Array(10).fill(wave));
-
-  const mouseIn = function () {
-    const newArr = Array(10)
-      .fill()
-      .map(() => {
-        const randomIndex = Math.floor(Math.random() * data.length);
-        return data[randomIndex].emoji;
-      });
-    setGrassArr(newArr);
+  let [idArr, setIdArr] = useState(Array(500).fill(0));
+  let Hover = (i) => {
+    let copyId = [...idArr];
+    copyId[i] = Rand(1, 21);
+    setIdArr(copyId);
   };
 
   return (
-    <div className="land">
-      <div onMouseOver={mouseIn}>
-        <Grass grassArr={grassArr} />
-      </div>
-    </div>
+    <>
+      {idArr.map((id, i) => {
+        return (
+          <span
+            key={i}
+            onMouseOver={() => {
+              Hover(i);
+            }}
+          >
+            {data[id].emoji}
+          </span>
+        );
+      })}
+    </>
   );
 }
 
-function Plant() {}
+// 난수생성 함수(min <= random <= max)
+function Rand(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 export default App;
