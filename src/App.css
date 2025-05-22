@@ -1,0 +1,16 @@
+body {
+  margin: 10px;
+  background-color: burlywood;
+  font-size: 40px;
+  overflow: hidden;
+
+  /* 드래그, 포인터 변경 제한 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
+}
+
+.change {
+  font-size: 80px;
+}
